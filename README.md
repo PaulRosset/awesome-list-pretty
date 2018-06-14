@@ -1,2 +1,1 @@
-# awesome-list-pretty
-Awesome List Prettied
+# Awesome List Prettied

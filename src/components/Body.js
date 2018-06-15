@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
-import { Hits, Highlight } from "react-instantsearch/dom";
+import { Hits } from "react-instantsearch/dom";
+import { connectStateResults } from "react-instantsearch/connectors";
 import { Authors } from "./Authors";
 import FontAwesomeIcon from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/fontawesome-free-brands";
@@ -42,12 +43,17 @@ const Desc = styled.p`
   margin-top: 0;
 `;
 
-export const Body = () => (
+const Body = ({ searchState, searchResults }) => (
   <BodyContainer>
-    <Hits hitComponent={Resulting} />
-    <Authors />
+    {searchResults && searchResults.nbHits !== 0 ? (
+      <Hits hitComponent={Resulting} />
+    ) : (
+      <p>No results has been found for {searchState.query}</p>
+    )}
   </BodyContainer>
 );
+
+export const WrappedBody = connectStateResults(Body);
 
 export const Resulting = ({ hit }) => (
   <Fragment>

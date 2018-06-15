@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Header } from "./components/Header";
 import { InstantSearch } from "react-instantsearch/dom";
-import { Body } from "./components/Body";
+import { WrappedBody } from "./components/Body";
+import { Authors } from "./components/Authors";
 
 class App extends Component {
   render() {
@@ -13,7 +14,8 @@ class App extends Component {
           indexName="dev_AWESOME"
         >
           <Header />
-          <Body />
+          <WrappedBody />
+          <Authors />
         </InstantSearch>
       </div>
     );

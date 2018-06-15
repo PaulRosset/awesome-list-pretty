@@ -45,6 +45,11 @@ body {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding: 15px;
+  justify-content: center;
+}
+
+.ais-Hits {
+  width: 100%;
 }
 
 .ais-Hits-item {

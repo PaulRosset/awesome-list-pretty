@@ -76,7 +76,7 @@ export const WrappedBody = connectStateResults(Body);
 
 export const Resulting = ({ hit }) => (
   <Fragment>
-    <ImgCategory src={Categories["Platforms"]} />
+    <ImgCategory src={Categories[hit.cat]} />
     <BodyContainerCard>
       <Title>
         <Awesome>awesome</Awesome> {hit.listName}

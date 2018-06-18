@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import FontAwesomeIcon from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/fontawesome-free-brands";
 
 const AuthorContainer = styled.footer`
   text-align: center;
@@ -14,6 +16,10 @@ export const Link = styled.a`
 
 export const Authors = () => (
   <AuthorContainer>
+    <Link href="https://github.com/PaulRosset/awesome-list-pretty">
+      <FontAwesomeIcon icon={faGithub} size="2x" />
+    </Link>
+    <br />
     Made by <Link href="https://github.com/PaulRosset">Paul Rosset</Link>
     <br />
     Data Provided by the{" "}

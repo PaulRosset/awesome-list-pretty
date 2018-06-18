@@ -13,7 +13,7 @@ body {
   padding: 11px 26px 13px;
   border: none;
   height: auto;
-  font-size: 30px;
+  font-size: 25px;
   color: rgb(51, 53, 53);
   outline: none;
   -webkit-appearance: none;
@@ -60,4 +60,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: 0.4s;
+}
+
+.ais-Hits-item:hover {
+  transition: 0.4s;
+  transform: translateY(-10px);
+  box-shadow: 0 3px 10px 0 rgba(33, 36, 61, 0.3);
 }

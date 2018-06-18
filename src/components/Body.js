@@ -6,6 +6,7 @@ import { Authors } from "./Authors";
 import FontAwesomeIcon from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/fontawesome-free-brands";
 import { Link } from "./Authors";
+import Categories from "./../categories";
 
 const BodyContainer = styled.div`
   width: 80%;
@@ -43,6 +44,24 @@ const Desc = styled.p`
   margin-top: 0;
 `;
 
+const Category = styled.span`
+  color: rgb(222, 218, 225);
+  font-size: 12px;
+  margin: 10px 0;
+  font-weight: bold;
+`;
+
+const Awesome = styled.span`
+  font-family: "Orbitron", sans-serif;
+  color: #fc60a8;
+`;
+
+const Title = styled.h4`
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+`;
+
 const Body = ({ searchState, searchResults }) => (
   <BodyContainer>
     {searchResults && searchResults.nbHits !== 0 ? (
@@ -57,10 +76,13 @@ export const WrappedBody = connectStateResults(Body);
 
 export const Resulting = ({ hit }) => (
   <Fragment>
-    <ImgCategory src="http://via.placeholder.com/50x50" />
+    <ImgCategory src={Categories["Platforms"]} />
     <BodyContainerCard>
-      <h4>{hit.name}</h4>
-      <Desc>Functional programming language for the JVM.</Desc>
+      <Title>
+        <Awesome>awesome</Awesome> {hit.listName}
+      </Title>
+      <Category>{hit.cat}</Category>
+      <Desc>{hit.desc}</Desc>
       <LinkIcon href={hit.url}>
         <FontAwesomeIcon icon={faGithub} size="2x" />
       </LinkIcon>

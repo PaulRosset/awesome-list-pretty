@@ -46,7 +46,7 @@ export const Header = () => (
       </SubTitle>
       <SearchBox
         translations={{
-          placeholder: "The Awesome List you are looking for..."
+          placeholder: "Search a list by category, name, keywords ..."
         }}
       />
       <Stats

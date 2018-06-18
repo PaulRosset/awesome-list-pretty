@@ -8,7 +8,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <InstantSearch appId="" apiKey="" indexName="">
+        <InstantSearch
+          appId={process.env.REACT_APP_APPID}
+          apiKey={process.env.REACT_APP_API_KEY}
+          indexName={process.env.REACT_APP_INDEX_NAME}
+        >
           <Header />
           <WrappedBody />
           <Authors />

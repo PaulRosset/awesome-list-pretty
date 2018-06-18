@@ -33,7 +33,7 @@ export default {
   Books,
   Editors,
   Gaming,
-  "Development Environment": "",
+  "Development Environment": DE,
   Entertainment,
   Databases,
   Media,

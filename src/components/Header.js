@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import Bg1 from "./../imgs/bg_3.svg";
 import logo from "./../imgs/logo.png";

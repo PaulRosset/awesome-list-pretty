@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 import styled from "styled-components";
 import { Hits } from "react-instantsearch/dom";
 import { connectStateResults } from "react-instantsearch/connectors";
-import { Authors } from "./Authors";
 import FontAwesomeIcon from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/fontawesome-free-brands";
 import { Link } from "./Authors";

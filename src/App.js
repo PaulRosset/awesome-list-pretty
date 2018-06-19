@@ -12,6 +12,7 @@ class App extends Component {
           appId={process.env.REACT_APP_APPID}
           apiKey={process.env.REACT_APP_API_KEY}
           indexName={process.env.REACT_APP_INDEX_NAME}
+          refresh={true}
         >
           <Header />
           <WrappedBody />

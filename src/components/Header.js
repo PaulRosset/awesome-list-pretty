@@ -28,7 +28,9 @@ const Title = styled.h2`
 `;
 
 const SubTitle = styled.h5`
-  margin-top: 0;
+  text-align: center;
+  margin: 0 10px 18px 10px;
+}
 `;
 
 const Img = styled.img`

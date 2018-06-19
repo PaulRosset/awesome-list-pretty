@@ -68,3 +68,14 @@ body {
   transform: translateY(-10px);
   box-shadow: 0 3px 10px 0 rgba(33, 36, 61, 0.3);
 }
+
+@media screen and (max-width: 640px) {
+  .ais-Hits-item {
+    flex-basis: 50px;
+  }
+
+  .ais-SearchBox-input {
+    min-width: 100%;
+    font-size: 20px;
+  }
+}

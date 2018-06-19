@@ -2,7 +2,10 @@
 
 <div align="center">
 	<img width="500" src="src/imgs/logo.png" alt="Awesome">
-    <a href="https://awesome.paulrossethings.com">Awesome Pretty List</a>
+    <br/>
+    <p>
+        <a href="https://awesome.paulrossethings.com">Awesome Pretty List 💅🏻</a>
+    </p>
 </div>
 
 ## Motivation
@@ -20,6 +23,12 @@ Use of [parser](https://github.com/PaulRosset/awesome-list-pretty/tree/master/pa
 Usage: parse.py -s(SingleObject)|-m(MultipleObject) -f <filename>
 ```
 
+## Left to-do
+
+- Automation at each pull request merged from the [Official Awesome List (root)](https://github.com/sindresorhus/awesome)
+- Add new features...
+
 ## License
 
+MIT  
 Paul Rosset

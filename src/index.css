@@ -71,7 +71,9 @@ body {
 
 @media screen and (max-width: 640px) {
   .ais-Hits-item {
-    flex-basis: 50px;
+    flex-basis: 100%;
+    -webkit-flex-basis: 100%;
+    -moz-flex-basis: 100%;
   }
 
   .ais-SearchBox-input {

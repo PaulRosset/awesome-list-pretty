@@ -17,16 +17,16 @@ Data are extracted from [Official Awesome List (root)](https://github.com/sindre
 
 In order to get the data from the official awesome list, i've also built a small parser to quickly build a json object with all awesome list in it to index them.
 
-Use of [parser](https://github.com/PaulRosset/awesome-list-pretty/tree/master/parser):
+Use of [parser](https://github.com/PaulRosset/awesome-list-pretty/tree/master/parser) as CLI and API:
 
 ```sh
-Usage: parse.py -s(SingleObject)|-m(MultipleObject) -f <filename>
+Usage: cli.py -s(SingleObject)|-m(MultipleObject) -f <filename>
 ```
 
 ## Left to-do
 
 - Automation at each pull request merged from the [Official Awesome List (root)](https://github.com/sindresorhus/awesome)
-- Add new features...
+- Add filters front-side
 
 ## License
 

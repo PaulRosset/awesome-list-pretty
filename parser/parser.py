@@ -7,9 +7,8 @@ import re
 import json
 
 
-def getData(filename="multObj.json"):
+def getDataMultipleObject(file):
     dictionnary = {}
-    file = open("readme.md", "r")
     title = ""
     for line in file:
         if line.split(" ")[0] == "##" and line.split(" ")[1] != "Contents\n" and line.split(" ")[1] != "License\n":
@@ -26,13 +25,11 @@ def getData(filename="multObj.json"):
                         "url": re.sub("[\(^\(\)\)]", "", match[2]),
                         "desc": re.sub("^[ \- ]+", "", match[3])
                     })
-    createFile(dictionnary, filename)
-    file.close()
+    return dictionnary
 
 
-def getDataSingleObject(filename="singleObj.json"):
+def getDataSingleObject(file):
     dictionnary = []
-    file = open("readme.md", "r")
     title = ""
     for line in file:
         if line.split(" ")[0] == "##" and line.split(" ")[1] != "Contents\n" and line.split(" ")[1] != "License\n":
@@ -49,14 +46,21 @@ def getDataSingleObject(filename="singleObj.json"):
                         "desc": re.sub("^[ \- ]+", "", match[3]),
                         "cat": title
                     })
-    createFile(dictionnary, filename)
-    file.close()
+    return dictionnary
 
 
 def createFile(dictionnary, filename):
     f = open(filename, "w+")
     f.write(json.dumps(dictionnary))
     f.close()
+
+
+def main(method, filename="result.json", fileToOpen="readme.md"):
+    file = open(fileToOpen, "r")
+    dic = getDataSingleObject(
+        file) if method == 1 else getDataMultipleObject(file)
+    createFile(dic, filename)
+    file.close()
 
 
 try:
@@ -73,13 +77,13 @@ except getopt.GetoptError:
     sys.exit(2)
 for opt, arg in optlist:
     if opt == "-s":
-        opts["obj"] = getDataSingleObject
+        opts["method"] = 1
     elif opt == "-m":
-        opts["obj"] = getData
+        opts["method"] = 0
     elif opt == "-f" and arg != "":
         opts["filename"] = arg
 
 if 'filename' in opts:
-    opts["obj"](opts["filename"])
+    main(opts["method"], opts["filename"])
 else:
-    opts["obj"]()
+    main(opts["method"])

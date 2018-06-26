@@ -93,6 +93,7 @@
 - [RubyMotion](https://github.com/motion-open-source/awesome-rubymotion) - Write cross-platform native apps for iOS, Android, macOS, tvOS, and watchOS in Ruby.
 - [Smart TV](https://github.com/vitalets/awesome-smart-tv) - Create apps for different TV platforms.
 - [GNOME](https://github.com/Kazhnuz/awesome-gnome) - Simple and distraction-free desktop environment for Linux.
+- [.NET](https://github.com/quozd/awesome-dotnet) - [Core](https://github.com/thangchung/awesome-dotnet-core)
 
 ## Programming Languages
 
@@ -125,7 +126,6 @@
 - [OCaml](https://github.com/rizo/awesome-ocaml)
 - [ColdFusion](https://github.com/seancoyne/awesome-coldfusion)
 - [Fortran](https://github.com/rabbiabram/awesome-fortran)
-- [.NET](https://github.com/quozd/awesome-dotnet) - [Core](https://github.com/thangchung/awesome-dotnet-core)
 - [PHP](https://github.com/ziadoz/awesome-php) - [Composer](https://github.com/jakoch/awesome-composer) - Package manager.
 - [Delphi](https://github.com/Fr0sT-Brutal/awesome-delphi)
 - [Assembler](https://github.com/jaspergould/awesome-asm)
@@ -374,7 +374,7 @@
 
 - [Umbraco](https://github.com/leekelleher/awesome-umbraco)
 - [Refinery CMS](https://github.com/refinerycms-contrib/awesome-refinerycms) - Ruby on Rails CMS.
-- [Wagtail](https://github.com/springload/awesome-wagtail) - Django CMS focused on flexibility and user experience.
+- [Wagtail](https://github.com/springload/awesome-wagtail) - Django CMS focused on flexibility and user experience.
 - [Textpattern](https://github.com/drmonkeyninja/awesome-textpattern) - Lightweight PHP-based CMS.
 - [Drupal](https://github.com/nirgn975/awesome-drupal) - Extensible PHP-based CMS.
 - [Craft CMS](https://github.com/craftcms/awesome) - Content-first CMS.
@@ -476,7 +476,8 @@
 - [Pokémon](https://github.com/tobiasbueschel/awesome-pokemon) - Pokémon and Pokémon GO.
 - [ChatOps](https://github.com/exAspArk/awesome-chatops) - Managing technical and business operations through a chat.
 - [Falsehood](https://github.com/kdeldycke/awesome-falsehood) - Falsehoods programmers believe in.
-- [Domain-Driven Design](https://github.com/heynickc/awesome-ddd) - Software development approach for complex needs by connecting the implementation to an evolving model.
+- [Domain-Driven Design](https://github.com/heynickc/awesome-ddd) - Software development approach for com
+                                                                      plex needs by connecting the implementation to an evolving model.
 - [Quantified Self](https://github.com/woop/awesome-quantified-self) - Self-tracking through technology.
 - [SaltStack](https://github.com/hbokh/awesome-saltstack) - Python-based config management system.
 - [Web Design](https://github.com/nicolesaidy/awesome-web-design) - For digital designers.
@@ -506,6 +507,7 @@
 - [Visual Regression Testing](https://github.com/mojoaxel/awesome-regression-testing) - Ensures changes did not break the functionality or style.
 - [Theravada](https://github.com/johnjago/awesome-theravada) - Teachings from the Theravada Buddhist tradition.
 - [inspectIT](https://github.com/inspectit-labs/awesome-inspectit) - Open source Java app performance management tool.
+
 
 ## License
 

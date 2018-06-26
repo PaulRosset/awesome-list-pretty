@@ -5,6 +5,8 @@ import sys
 import getopt
 import re
 import json
+import urllib2
+import os
 
 
 def getDataMultipleObject(file):
@@ -55,7 +57,18 @@ def createFile(dictionnary, filename):
     f.close()
 
 
+def getDataFromUrlInFile(url):
+    content = urllib2.urlopen(url).read()
+    file = open("readme.md", "w+")
+    file.write(content)
+    # Little Hack for an easier parsing ->.
+    os.system("./node_modules/.bin/prettier --write readme.md")
+    file.close()
+
+
 def main(method, filename="result.json", fileToOpen="readme.md"):
+    getDataFromUrlInFile(
+        "https://raw.githubusercontent.com/sindresorhus/awesome/master/readme.md")
     file = open(fileToOpen, "r")
     dic = getDataSingleObject(
         file) if method == 1 else getDataMultipleObject(file)
@@ -63,27 +76,6 @@ def main(method, filename="result.json", fileToOpen="readme.md"):
     file.close()
 
 
-try:
-    opts = {}
-    optOr = 0
-    optlist, args = getopt.getopt(sys.argv[1:], "smf:")
-    for opt, arg in optlist:
-        if opt == "-s" or opt == "-m":
-            optOr += 1
-    if optOr > 1 or optOr == 0:
-        raise getopt.GetoptError("Error", "Argument -s|-m ")
-except getopt.GetoptError:
-    print "Usage: parse.py -s(SingleObject)|-m(MultipleObject) -f <filename>"
-    sys.exit(2)
-for opt, arg in optlist:
-    if opt == "-s":
-        opts["method"] = 1
-    elif opt == "-m":
-        opts["method"] = 0
-    elif opt == "-f" and arg != "":
-        opts["filename"] = arg
-
-if 'filename' in opts:
-    main(opts["method"], opts["filename"])
-else:
-    main(opts["method"])
+def verifyLength(file):
+    file = open("readme.md", "r")
+    print len(getDataSingleObject(file))

@@ -17,7 +17,7 @@ def getDataMultipleObject(file):
             getLine = line.split(" ")[1:]
             title = " ".join(getLine).replace("\n", "")
             dictionnary[title] = []
-        if line.split(" ")[0] == "-" and title != "":
+        if (line.split(" ")[0] == "-" or line.split(" ")[0] == "\t-" and title != "") and not re.match("(^- \[[a-z A-Z-0-9]+\]\(#[a-z0-9-]+\)$)", line):
             matches = re.findall(
                 "((\[[a-z\. &/`À-ÿ+\-A-Z0-9]*])(\([a-zA-Z]*.*?\))( - [a-zA-Z0-9].+?(?=\.))*)", line)
             if matches:
@@ -37,7 +37,7 @@ def getDataSingleObject(file):
         if line.split(" ")[0] == "##" and line.split(" ")[1] != "Contents\n" and line.split(" ")[1] != "License\n":
             getLine = line.split(" ")[1:]
             title = " ".join(getLine).replace("\n", "")
-        if line.split(" ")[0] == "-" and title != "":
+        if (line.split(" ")[0] == "-" or line.split(" ")[0] == "\t-" and title != "") and not re.match("(^- \[[a-z A-Z-0-9]+\]\(#[a-z0-9-]+\)$)", line):
             matches = re.findall(
                 "((\[[a-z\. &/`À-ÿ+\-A-Z0-9]*])(\([a-zA-Z]*.*?\))( - [a-zA-Z0-9].+?(?=\.))*)", line)
             if matches:
@@ -61,8 +61,6 @@ def getDataFromUrlInFile(url):
     content = urllib2.urlopen(url).read()
     file = open("readme.md", "w+")
     file.write(content)
-    # Little Hack for an easier parsing ->.
-    os.system("./node_modules/.bin/prettier --write readme.md")
     file.close()
 
 
@@ -76,6 +74,6 @@ def main(method, filename="result.json", fileToOpen="readme.md"):
     file.close()
 
 
-def verifyLength(file):
+def verifyLength():
     file = open("readme.md", "r")
     print len(getDataSingleObject(file))

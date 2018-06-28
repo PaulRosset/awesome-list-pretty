@@ -1,12 +1,9 @@
 #!/usr/bin/python
 # coding: utf8
 
-import sys
-import getopt
 import re
 import json
 import urllib2
-import os
 
 
 def getDataMultipleObject(file):

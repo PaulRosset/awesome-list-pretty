@@ -8,14 +8,14 @@ def lambda_handler(event, context):
     resClean = cleanBeforeFilling()
     resPush = pushNewIndexs()
     if resClean == "done" and resPush == "done":
-        return json.dumps({
+        return {
             "statusCode": 200,
             "headers": {"Content-Type": "application/json"},
-            "body": {"status": "Done!"}
-        })
+            "body": json.dumps({"status": "Done!"})
+        }
     else:
-        return json.dumps({
+        return {
             "statusCode": 500,
             "headers": {"Content-Type": "application/json"},
-            "body": {"status": "KO", "CleanStatus": resClean, "PushStatus": resPush}
-        })
+            "body": json.dumps({"status": "KO", "CleanStatus": resClean, "PushStatus": resPush})
+        }

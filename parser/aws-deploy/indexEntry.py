@@ -25,7 +25,7 @@ def pushNewIndexs():
     try:
         getDataFromUrlInFile(
             "https://raw.githubusercontent.com/sindresorhus/awesome/master/readme.md")
-        file = open("/tmp/readme.md", "r")
+        file = open("readme.md", "r")
         res = getDataSingleObject(file)
         index.add_objects(res)
         file.close()
